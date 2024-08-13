@@ -1,0 +1,50 @@
+
+.cart {
+  display: none;
+  width: 250px;
+  height: 100%;
+  padding: 3rem;
+  background: #111;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 9;
+  overflow: auto;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: purple;
+  padding: 10px;
+  border-radius: 50%;
+  top: 12px;
+  right: 12px;
+  z-index: 99;
+  transition: all .3s ease;
+}
+
+.cart-button:hover {
+  scale: 1.1;
+}
+
+.cart li {
+  padding: 10px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.cart-button ~ input:checked ~ .cart {
+  display: block;
+}
+
+.cart button {
+  padding: 5px 10px;
+  border-radius: 12px;
+  background-color: purple;
+}
+
+.cart button:hover {
+  background-color: rgb(156, 33, 156);
+}
