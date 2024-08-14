@@ -5,7 +5,11 @@ import { CartContext } from "../context/cart";
 
 export function Products ( { products } ) {
 
-  const { addToCart, findProducts, removeFromCart } = useContext(CartContext)
+  const { addToCart, removeFromCart, cart } = useContext(CartContext)
+
+  const findProducts = product => {
+    return cart.some(item => item.id === product.id)
+  }
 
   return (
     <main className="flex items-center justify-center">
